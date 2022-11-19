@@ -38,8 +38,8 @@ class Md(private val outputStream: OutputStream) {
 sealed class MdElement(private val md: Md) {
     protected open val level: Int = 0
 
-    fun section(title: String, content: (Section.() -> Unit)? = null): Section {
-        val section = Section(md, title, level + 1)
+    fun section(content: (Section.() -> Unit)? = null): Section {
+        val section = Section(md, level + 1)
         md.add(section)
         content?.invoke(section)
         return section
@@ -54,11 +54,15 @@ sealed class MdElement(private val md: Md) {
 
 class Section(
     md: Md,
-    private val title: String,
     override var level: Int
 ) : MdElement(md) {
+    private var title = ""
     override fun toString(): String {
         return "${"#".times(level)} $title"
+    }
+
+    operator fun String.unaryPlus() {
+        this@Section.title = this
     }
 }
 

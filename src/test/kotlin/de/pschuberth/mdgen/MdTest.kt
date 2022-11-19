@@ -31,7 +31,7 @@ class MdTest {
     fun `Can generate # Title`() {
         // Act
         md.start {
-            section("Hello World")
+            section { +"Hello World" }
         }
         md.render()
 
@@ -44,7 +44,8 @@ class MdTest {
     fun `Can create # Title with paragraph`() {
         // Act
         md.start {
-            section("Hello World") {
+            section {
+                +"Hello World"
                 paragraph("I am a paragraph.")
             }
         }.render()
@@ -84,8 +85,9 @@ class MdTest {
     fun `Can create nested ## Subtitle`() {
         // Act
         md.start {
-            section("Hello World") {
-                section("Subsection")
+            section {
+                +"Hello World"
+                section { +"Subsection" }
             }
         }.render()
         // Assert
@@ -103,9 +105,13 @@ class MdTest {
     fun `Can create nested ### Subsubtitle`() {
         // Act
         md.start {
-            section("Hello World") {
-                section("Subsection") {
-                    section("Subsubsection")
+            section {
+                +"Hello World"
+                section {
+                    +"Subsection"
+                    section {
+                        +"Subsubsection"
+                    }
                 }
             }
         }.render()
