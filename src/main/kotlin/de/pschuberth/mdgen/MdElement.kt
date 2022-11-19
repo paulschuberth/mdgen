@@ -16,7 +16,7 @@ sealed class MdElement(private val md: Md) {
         return mdParagraph
     }
 
-    fun list(content: MdList.() -> Unit): MdList {
+    open fun list(content: MdList.() -> Unit): MdList {
         val mdList = MdList(md)
         content.invoke(mdList)
         md.add(mdList)

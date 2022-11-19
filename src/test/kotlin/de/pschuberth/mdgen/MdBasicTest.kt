@@ -1,31 +1,10 @@
 package de.pschuberth.mdgen
 
-import org.junit.jupiter.api.AfterEach
-import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
-import java.io.File
-import java.io.FileOutputStream
 import java.nio.charset.Charset
 import kotlin.test.assertEquals
 
-class MdTest {
-
-    private lateinit var file: File
-    private lateinit var md: Md
-
-    @BeforeEach
-    fun setup() {
-        file = File.createTempFile("MdTest", ".md")
-        val outputStream = FileOutputStream(file)
-        md = Md(outputStream)
-    }
-
-    @AfterEach
-    fun cleanup() {
-        if (file.exists()) {
-            file.delete()
-        }
-    }
+class MdBasicTest : MdTestCase() {
 
     @Test
     fun `Can generate # Title`() {
@@ -163,50 +142,6 @@ class MdTest {
             # Hello World
             ## Subsection
             ### Subsubsection
-            """.trimIndent(),
-            fileContent
-        )
-    }
-
-    @Test
-    fun `Can create unordered list`() {
-        md.start {
-            list {
-                -"First"
-                -"Second"
-                -"Third"
-            }
-        }.render()
-
-        // Assert
-        val fileContent = file.readText(Charset.defaultCharset())
-        assertEquals(
-            """
-            - First
-            - Second
-            - Third
-            """.trimIndent(),
-            fileContent
-        )
-    }
-
-    @Test
-    fun `Can create ordered list`() {
-        md.start {
-            list {
-                +"First"
-                +"Second"
-                +"Third"
-            }
-        }.render()
-
-        // Assert
-        val fileContent = file.readText(Charset.defaultCharset())
-        assertEquals(
-            """
-            1. First
-            2. Second
-            3. Third
             """.trimIndent(),
             fileContent
         )
