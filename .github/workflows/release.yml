@@ -1,0 +1,25 @@
+---
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        with:
+          release-type: java
+          bump-minor-pre-major: true
+          bump-patch-for-minor-pre-major: true
+          changelog-types: >-
+            [
+            {"type":"feat","section":"Features","hidden":false},
+            {"type":"fix","section":"Bug Fixes","hidden":false},
+            {"type":"chore","section":"Miscellaneous","hidden":false}
+            ]
+          extra-files: |
+            build.gradle.kts
