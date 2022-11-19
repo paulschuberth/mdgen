@@ -6,6 +6,15 @@ on:
     branches:
       - main
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  checks: write
+  pull-requests: write
+  actions: read
+  contents: read
 
 jobs:
   actionlint:
