@@ -8,6 +8,20 @@ on:
 
 
 jobs:
+  actionlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: reviewdog/action-actionlint@v1
+
+  pr-title:
+    runs-on: ubuntu-latest
+    steps:
+      - name: PR Title conforms to Conventional Commits
+        uses: amannn/action-semantic-pull-request@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   build:
     runs-on: ubuntu-latest
     steps:
@@ -23,8 +37,8 @@ jobs:
 
       - run: ./gradlew build -i
 
-      - uses: actions/upload-artifact@v2  # upload test results
-        if: success() || failure()        # run this step even if previous step failed
+      - uses: actions/upload-artifact@v2
+        if: success() || failure()
         with:
           name: test-results
           path: build/test-results/test

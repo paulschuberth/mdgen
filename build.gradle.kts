@@ -5,7 +5,9 @@ plugins {
 }
 
 group = "de.pschuberth"
+// x-release-please-start-version
 version = "0.1.0-SNAPSHOT"
+// x-release-please-end
 
 repositories {
     mavenCentral()
