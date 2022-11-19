@@ -24,10 +24,10 @@ class Md(private val outputStream: OutputStream) {
             val previous = pair.first
             val current = pair.second
 
-            if (previous is Paragraph && current is Paragraph) {
+            if (previous is MdParagraph && current is MdParagraph) {
                 separator = "\n\n"
             }
-            if (previous is Paragraph && current is Section) {
+            if (previous is MdParagraph && current is MdSection) {
                 separator = "\n\n"
             }
             outputStream.write("$separator$current".toByteArray())
@@ -35,52 +35,4 @@ class Md(private val outputStream: OutputStream) {
     }
 }
 
-sealed class MdElement(private val md: Md) {
-    protected open val level: Int = 0
-
-    fun section(sectionLevel: Int = level + 1, content: (Section.() -> Unit)? = null): Section {
-        val section = Section(md, sectionLevel)
-        md.add(section)
-        content?.invoke(section)
-        return section
-    }
-
-    fun paragraph(content: String): Paragraph {
-        val paragraph = Paragraph(md, content)
-        md.add(paragraph)
-        return paragraph
-    }
-}
-
-class Section(
-    md: Md,
-    override var level: Int
-) : MdElement(md) {
-    private var title = ""
-    override fun toString(): String {
-        return "${"#".times(level)} $title"
-    }
-
-    operator fun String.unaryPlus() {
-        this@Section.title = this
-    }
-}
-
-class Paragraph(
-    md: Md,
-    val content: String
-) : MdElement(md) {
-    override fun toString(): String {
-        return content
-    }
-}
-
 class EmptyStartElement(md: Md) : MdElement(md)
-
-private fun String.times(count: Int): String {
-    var result = ""
-    for (i in 0 until count) {
-        result = result.plus(this)
-    }
-    return result
-}

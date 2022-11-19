@@ -145,4 +145,48 @@ class MdTest {
             fileContent
         )
     }
+
+    @Test
+    fun `Can create unordered list`() {
+        md.start {
+            list {
+                -"First"
+                -"Second"
+                -"Third"
+            }
+        }.render()
+
+        // Assert
+        val fileContent = file.readText(Charset.defaultCharset())
+        assertEquals(
+            """
+            - First
+            - Second
+            - Third
+            """.trimIndent(),
+            fileContent
+        )
+    }
+
+    @Test
+    fun `Can create ordered list`() {
+        md.start {
+            list {
+                +"First"
+                +"Second"
+                +"Third"
+            }
+        }.render()
+
+        // Assert
+        val fileContent = file.readText(Charset.defaultCharset())
+        assertEquals(
+            """
+            1. First
+            2. Second
+            3. Third
+            """.trimIndent(),
+            fileContent
+        )
+    }
 }
