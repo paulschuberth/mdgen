@@ -38,8 +38,8 @@ class Md(private val outputStream: OutputStream) {
 sealed class MdElement(private val md: Md) {
     protected open val level: Int = 0
 
-    fun section(content: (Section.() -> Unit)? = null): Section {
-        val section = Section(md, level + 1)
+    fun section(sectionLevel: Int = level + 1, content: (Section.() -> Unit)? = null): Section {
+        val section = Section(md, sectionLevel)
         md.add(section)
         content?.invoke(section)
         return section

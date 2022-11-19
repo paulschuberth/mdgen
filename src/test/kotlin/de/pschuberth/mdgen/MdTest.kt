@@ -41,6 +41,25 @@ class MdTest {
     }
 
     @Test
+    fun `Can generate section with specified nesting`() {
+        // Act
+        md.start {
+            section(4) {
+                +"Hello"
+            }
+        }.render()
+
+        // Assert
+        val fileContent = file.readText(Charset.defaultCharset())
+        assertEquals(
+            """
+            #### Hello
+            """.trimIndent(),
+            fileContent
+        )
+    }
+
+    @Test
     fun `Can create # Title with paragraph`() {
         // Act
         md.start {
