@@ -4,6 +4,7 @@ import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
 import java.io.File
 import java.io.FileOutputStream
+import java.nio.charset.Charset
 
 abstract class MdTestCase {
     protected lateinit var file: File
@@ -22,4 +23,6 @@ abstract class MdTestCase {
             file.delete()
         }
     }
+
+    protected fun fileContent() = file.readText(Charset.defaultCharset())
 }
