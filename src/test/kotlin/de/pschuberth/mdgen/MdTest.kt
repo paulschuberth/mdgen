@@ -81,6 +81,28 @@ class MdTest {
     }
 
     @Test
+    fun `Adds two new lines between paragraph and next headline`() {
+        // Act
+        md.start {
+            paragraph("I am a paragraph.")
+            section {
+                +"Hello World"
+            }
+        }.render()
+
+        // Assert
+        val fileContent = file.readText(Charset.defaultCharset())
+        assertEquals(
+            """
+            I am a paragraph.
+            
+            # Hello World
+            """.trimIndent(),
+            fileContent
+        )
+    }
+
+    @Test
     fun `Can chain paragraphs`() {
         // Act
         md.start {
