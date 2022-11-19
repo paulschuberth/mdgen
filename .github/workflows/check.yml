@@ -33,10 +33,10 @@ jobs:
           distribution: 'temurin'
           java-version: 17
 
-      - name: Setup Gradle
+      - name: Publish package
         uses: gradle/gradle-build-action@v2
-
-      - run: ./gradlew build
+        with:
+          arguments: build
 
       - uses: actions/upload-artifact@v2
         if: success() || failure()
