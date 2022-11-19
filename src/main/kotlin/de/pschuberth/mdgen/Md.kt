@@ -6,16 +6,16 @@ class Md(private val outputStream: OutputStream) {
 
     private val elements: MutableList<MdElement> = mutableListOf()
 
-    fun start(content: MdElement.() -> Unit): Md {
+    fun start(content: MdElement.() -> Unit) {
         content(EmptyStartElement(this))
-        return this
+        render()
     }
 
     fun add(element: MdElement) {
         elements.add(element)
     }
 
-    fun render() {
+    private fun render() {
         if (elements.isNotEmpty()) {
             outputStream.write(elements.first().toString().toByteArray())
         }

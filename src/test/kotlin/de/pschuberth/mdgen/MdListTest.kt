@@ -14,7 +14,7 @@ class MdListTest : MdTestCase() {
                 -"Second"
                 -"Third"
             }
-        }.render()
+        }
 
         // Assert
         val fileContent = file.readText(Charset.defaultCharset())
@@ -36,7 +36,7 @@ class MdListTest : MdTestCase() {
                 +"Second"
                 +"Third"
             }
-        }.render()
+        }
 
         // Assert
         val fileContent = file.readText(Charset.defaultCharset())
@@ -59,7 +59,7 @@ class MdListTest : MdTestCase() {
                 +"Second"
                 +"Third"
             }
-        }.render()
+        }
 
         // Assert
         val fileContent = file.readText(Charset.defaultCharset())
@@ -85,7 +85,7 @@ class MdListTest : MdTestCase() {
                 }
                 -"Third"
             }
-        }.render()
+        }
 
         // Assert
         val fileContent = file.readText(Charset.defaultCharset())
@@ -113,7 +113,7 @@ class MdListTest : MdTestCase() {
                 }
                 +"Third"
             }
-        }.render()
+        }
 
         // Assert
         val fileContent = file.readText(Charset.defaultCharset())
@@ -141,7 +141,7 @@ class MdListTest : MdTestCase() {
                 }
                 -"Third"
             }
-        }.render()
+        }
 
         // Assert
         val fileContent = file.readText(Charset.defaultCharset())
@@ -169,7 +169,7 @@ class MdListTest : MdTestCase() {
                 }
                 +"Third"
             }
-        }.render()
+        }
 
         // Assert
         val fileContent = file.readText(Charset.defaultCharset())

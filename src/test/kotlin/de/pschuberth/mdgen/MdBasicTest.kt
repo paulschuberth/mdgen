@@ -12,7 +12,7 @@ class MdBasicTest : MdTestCase() {
         md.start {
             section { +"Hello World" }
         }
-        md.render()
+        md
 
         // Assert
         val fileContent = file.readText(Charset.defaultCharset())
@@ -26,7 +26,7 @@ class MdBasicTest : MdTestCase() {
             section(4) {
                 +"Hello"
             }
-        }.render()
+        }
 
         // Assert
         val fileContent = file.readText(Charset.defaultCharset())
@@ -46,7 +46,7 @@ class MdBasicTest : MdTestCase() {
                 +"Hello World"
                 paragraph("I am a paragraph.")
             }
-        }.render()
+        }
 
         // Assert
         val fileContent = file.readText(Charset.defaultCharset())
@@ -67,7 +67,7 @@ class MdBasicTest : MdTestCase() {
             section {
                 +"Hello World"
             }
-        }.render()
+        }
 
         // Assert
         val fileContent = file.readText(Charset.defaultCharset())
@@ -87,7 +87,7 @@ class MdBasicTest : MdTestCase() {
         md.start {
             paragraph("First paragraph.")
             paragraph("Second paragraph.")
-        }.render()
+        }
 
         // Assert
         val fileContent = file.readText(Charset.defaultCharset())
@@ -109,7 +109,7 @@ class MdBasicTest : MdTestCase() {
                 +"Hello World"
                 section { +"Subsection" }
             }
-        }.render()
+        }
         // Assert
         val fileContent = file.readText(Charset.defaultCharset())
         assertEquals(
@@ -134,7 +134,7 @@ class MdBasicTest : MdTestCase() {
                     }
                 }
             }
-        }.render()
+        }
         // Assert
         val fileContent = file.readText(Charset.defaultCharset())
         assertEquals(
