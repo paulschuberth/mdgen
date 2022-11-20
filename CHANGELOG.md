@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.2.1](https://github.com/paulschuberth/mdgen/compare/v0.2.0...v0.2.1) (2022-11-20)
+
+
+### Miscellaneous
+
+* **main:** release 0.2.1-SNAPSHOT ([ac6e662](https://github.com/paulschuberth/mdgen/commit/ac6e662ffac38cb5b558e7f410cf0c4002bad79a))
+* **main:** release 0.2.1-SNAPSHOT ([#8](https://github.com/paulschuberth/mdgen/issues/8)) ([a8264bd](https://github.com/paulschuberth/mdgen/commit/a8264bdebb7ecba40cd2d6bb57ddeda996413f55))
+* move EmptyStartElement into dedicated file ([3893ea7](https://github.com/paulschuberth/mdgen/commit/3893ea7297876cdf9affe870dfdc1568d34ae431))
+
 ## 0.2.0 (2022-11-20)
 
 
