@@ -22,4 +22,9 @@ sealed class MdElement(private val md: Md) {
         md.add(mdList)
         return mdList
     }
+
+    fun code(language: String = "", content: () -> String) {
+        val mdCodeBlock = MdCodeBlock(md, language, content.invoke())
+        md.add(mdCodeBlock)
+    }
 }
