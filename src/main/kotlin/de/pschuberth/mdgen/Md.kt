@@ -34,5 +34,3 @@ class Md(private val outputStream: OutputStream) {
         }
     }
 }
-
-class EmptyStartElement(md: Md) : MdElement(md)
