@@ -1,7 +1,6 @@
 package de.pschuberth.mdgen
 
 import org.junit.jupiter.api.Test
-import java.nio.charset.Charset
 import kotlin.test.assertEquals
 
 class MdBasicTest : MdTestCase() {
@@ -12,11 +11,9 @@ class MdBasicTest : MdTestCase() {
         md.start {
             section { +"Hello World" }
         }
-        md.render()
 
         // Assert
-        val fileContent = file.readText(Charset.defaultCharset())
-        assertEquals("# Hello World", fileContent)
+        assertEquals("# Hello World", fileContent())
     }
 
     @Test
@@ -26,15 +23,14 @@ class MdBasicTest : MdTestCase() {
             section(4) {
                 +"Hello"
             }
-        }.render()
+        }
 
         // Assert
-        val fileContent = file.readText(Charset.defaultCharset())
         assertEquals(
             """
             #### Hello
             """.trimIndent(),
-            fileContent
+            fileContent()
         )
     }
 
@@ -46,16 +42,15 @@ class MdBasicTest : MdTestCase() {
                 +"Hello World"
                 paragraph("I am a paragraph.")
             }
-        }.render()
+        }
 
         // Assert
-        val fileContent = file.readText(Charset.defaultCharset())
         assertEquals(
             """
             # Hello World
             I am a paragraph.
             """.trimIndent(),
-            fileContent
+            fileContent()
         )
     }
 
@@ -67,17 +62,16 @@ class MdBasicTest : MdTestCase() {
             section {
                 +"Hello World"
             }
-        }.render()
+        }
 
         // Assert
-        val fileContent = file.readText(Charset.defaultCharset())
         assertEquals(
             """
             I am a paragraph.
             
             # Hello World
             """.trimIndent(),
-            fileContent
+            fileContent()
         )
     }
 
@@ -87,17 +81,16 @@ class MdBasicTest : MdTestCase() {
         md.start {
             paragraph("First paragraph.")
             paragraph("Second paragraph.")
-        }.render()
+        }
 
         // Assert
-        val fileContent = file.readText(Charset.defaultCharset())
         assertEquals(
             """
             First paragraph.
             
             Second paragraph.
             """.trimIndent(),
-            fileContent
+            fileContent()
         )
     }
 
@@ -109,15 +102,14 @@ class MdBasicTest : MdTestCase() {
                 +"Hello World"
                 section { +"Subsection" }
             }
-        }.render()
+        }
         // Assert
-        val fileContent = file.readText(Charset.defaultCharset())
         assertEquals(
             """
             # Hello World
             ## Subsection
             """.trimIndent(),
-            fileContent
+            fileContent()
         )
     }
 
@@ -134,16 +126,15 @@ class MdBasicTest : MdTestCase() {
                     }
                 }
             }
-        }.render()
+        }
         // Assert
-        val fileContent = file.readText(Charset.defaultCharset())
         assertEquals(
             """
             # Hello World
             ## Subsection
             ### Subsubsection
             """.trimIndent(),
-            fileContent
+            fileContent()
         )
     }
 }

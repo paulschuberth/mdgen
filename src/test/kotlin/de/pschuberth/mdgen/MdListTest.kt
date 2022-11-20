@@ -1,7 +1,6 @@
 package de.pschuberth.mdgen
 
 import org.junit.jupiter.api.Test
-import java.nio.charset.Charset
 import kotlin.test.assertEquals
 
 class MdListTest : MdTestCase() {
@@ -14,17 +13,16 @@ class MdListTest : MdTestCase() {
                 -"Second"
                 -"Third"
             }
-        }.render()
+        }
 
         // Assert
-        val fileContent = file.readText(Charset.defaultCharset())
         assertEquals(
             """
             - First
             - Second
             - Third
             """.trimIndent(),
-            fileContent
+            fileContent()
         )
     }
 
@@ -36,17 +34,16 @@ class MdListTest : MdTestCase() {
                 +"Second"
                 +"Third"
             }
-        }.render()
+        }
 
         // Assert
-        val fileContent = file.readText(Charset.defaultCharset())
         assertEquals(
             """
             1. First
             2. Second
             3. Third
             """.trimIndent(),
-            fileContent
+            fileContent()
         )
     }
 
@@ -59,17 +56,16 @@ class MdListTest : MdTestCase() {
                 +"Second"
                 +"Third"
             }
-        }.render()
+        }
 
         // Assert
-        val fileContent = file.readText(Charset.defaultCharset())
         assertEquals(
             """
             23. First
             24. Second
             25. Third
             """.trimIndent(),
-            fileContent
+            fileContent()
         )
     }
 
@@ -85,10 +81,9 @@ class MdListTest : MdTestCase() {
                 }
                 -"Third"
             }
-        }.render()
+        }
 
         // Assert
-        val fileContent = file.readText(Charset.defaultCharset())
         assertEquals(
             """
             - First
@@ -97,7 +92,7 @@ class MdListTest : MdTestCase() {
                 2. Second nested
             - Third
             """.trimIndent(),
-            fileContent
+            fileContent()
         )
     }
 
@@ -113,10 +108,9 @@ class MdListTest : MdTestCase() {
                 }
                 +"Third"
             }
-        }.render()
+        }
 
         // Assert
-        val fileContent = file.readText(Charset.defaultCharset())
         assertEquals(
             """
             1. First
@@ -125,7 +119,7 @@ class MdListTest : MdTestCase() {
                 - Second nested
             3. Third
             """.trimIndent(),
-            fileContent
+            fileContent()
         )
     }
 
@@ -141,10 +135,9 @@ class MdListTest : MdTestCase() {
                 }
                 -"Third"
             }
-        }.render()
+        }
 
         // Assert
-        val fileContent = file.readText(Charset.defaultCharset())
         assertEquals(
             """
             - First
@@ -153,7 +146,7 @@ class MdListTest : MdTestCase() {
                 - Second nested
             - Third
             """.trimIndent(),
-            fileContent
+            fileContent()
         )
     }
 
@@ -169,10 +162,9 @@ class MdListTest : MdTestCase() {
                 }
                 +"Third"
             }
-        }.render()
+        }
 
         // Assert
-        val fileContent = file.readText(Charset.defaultCharset())
         assertEquals(
             """
             1. First
@@ -181,7 +173,7 @@ class MdListTest : MdTestCase() {
                 2. Second nested
             3. Third
             """.trimIndent(),
-            fileContent
+            fileContent()
         )
     }
 }
