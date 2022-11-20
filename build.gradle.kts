@@ -33,42 +33,6 @@ tasks.withType<KotlinCompile> {
 }
 
 publishing {
-    publications {
-        create<MavenPublication>("mavenJava") {
-            artifactId = "mdgen"
-            from(components["java"])
-            versionMapping {
-                usage("java-api") {
-                    fromResolutionOf("runtimeClasspath")
-                }
-                usage("java-runtime") {
-                    fromResolutionResult()
-                }
-            }
-            pom {
-                name.set("mdgen")
-                description.set("A Kotlin DSL to generate basic Markdown files")
-                url.set("https://github.com/paulschuberth/mdgen")
-                licenses {
-                    license {
-                        name.set("MIT License")
-                        url.set("https://opensource.org/licenses/MIT")
-                    }
-                }
-                developers {
-                    developer {
-                        id.set("paulschuberth")
-                        name.set("Paul Schuberth")
-                        email.set("github@pschuberth.de")
-                    }
-                }
-                scm {
-                    connection.set("scm:git:git://github.com/paulschuberth/mdgen")
-                    url.set("https://github.com/paulschuberth/mdgen")
-                }
-            }
-        }
-    }
     repositories {
         maven {
             name = "GitHub"
@@ -77,6 +41,11 @@ publishing {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_TOKEN")
             }
+        }
+    }
+    publications {
+        register<MavenPublication>("gpr") {
+            from(components["java"])
         }
     }
 }
