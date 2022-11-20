@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.2.2](https://github.com/paulschuberth/mdgen/compare/v0.2.1...v0.2.2) (2022-11-20)
+
+
+### Bug Fixes
+
+* **release:** publish snapshots as well ([460f5ec](https://github.com/paulschuberth/mdgen/commit/460f5ec8a88dae743923fafc46314b755fb05912))
+
+
+### Miscellaneous
+
+* **main:** release 0.2.2-SNAPSHOT ([bd3c904](https://github.com/paulschuberth/mdgen/commit/bd3c904cfda841968ff2f4ed1f43222981d97152))
+* **main:** release 0.2.2-SNAPSHOT ([#10](https://github.com/paulschuberth/mdgen/issues/10)) ([9b9857f](https://github.com/paulschuberth/mdgen/commit/9b9857f45075dfa5b908ba734590173e093758b4))
+
 ## [0.2.1](https://github.com/paulschuberth/mdgen/compare/v0.2.0...v0.2.1) (2022-11-20)
 
 
