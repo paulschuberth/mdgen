@@ -33,5 +33,7 @@ class Md(private val outputStream: OutputStream) {
             }
             outputStream.write("$separator$current".toByteArray())
         }
+        // Add trailing newline
+        outputStream.write("\n".toByteArray())
     }
 }

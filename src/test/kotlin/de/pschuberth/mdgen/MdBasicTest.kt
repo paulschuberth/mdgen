@@ -13,7 +13,7 @@ class MdBasicTest : MdTestCase() {
         }
 
         // Assert
-        assertEquals("# Hello World", fileContent())
+        assertEquals("# Hello World", fileContent().trim())
     }
 
     @Test
@@ -30,7 +30,7 @@ class MdBasicTest : MdTestCase() {
             """
             #### Hello
             """.trimIndent(),
-            fileContent()
+            fileContent().trim()
         )
     }
 
@@ -51,7 +51,7 @@ class MdBasicTest : MdTestCase() {
             
             I am a paragraph.
             """.trimIndent(),
-            fileContent()
+            fileContent().trim()
         )
     }
 
@@ -72,7 +72,7 @@ class MdBasicTest : MdTestCase() {
             
             # Hello World
             """.trimIndent(),
-            fileContent()
+            fileContent().trim()
         )
     }
 
@@ -93,7 +93,7 @@ class MdBasicTest : MdTestCase() {
             
             - List Item
             """.trimIndent(),
-            fileContent()
+            fileContent().trim()
         )
     }
 
@@ -112,7 +112,7 @@ class MdBasicTest : MdTestCase() {
             
             Second paragraph.
             """.trimIndent(),
-            fileContent()
+            fileContent().trim()
         )
     }
 
@@ -132,7 +132,7 @@ class MdBasicTest : MdTestCase() {
             
             ## Subsection
             """.trimIndent(),
-            fileContent()
+            fileContent().trim()
         )
     }
 
@@ -159,7 +159,7 @@ class MdBasicTest : MdTestCase() {
             
             ### Subsubsection
             """.trimIndent(),
-            fileContent()
+            fileContent().trim()
         )
     }
 
@@ -168,7 +168,7 @@ class MdBasicTest : MdTestCase() {
         md.start { }
 
         assertEquals(
-            "\n".trimIndent(),
+            "\n",
             fileContent()
         )
     }
