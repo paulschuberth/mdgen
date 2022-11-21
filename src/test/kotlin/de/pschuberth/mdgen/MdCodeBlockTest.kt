@@ -26,7 +26,7 @@ class MdCodeBlockTest : MdTestCase() {
             }
             ```
             """.trimIndent(),
-            fileContent()
+            fileContent().trim()
         )
     }
 
@@ -52,7 +52,7 @@ class MdCodeBlockTest : MdTestCase() {
             }
             ```
             """.trimIndent(),
-            fileContent()
+            fileContent().trim()
         )
     }
 }

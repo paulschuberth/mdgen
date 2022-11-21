@@ -13,7 +13,7 @@ class MdBasicTest : MdTestCase() {
         }
 
         // Assert
-        assertEquals("# Hello World", fileContent())
+        assertEquals("# Hello World", fileContent().trim())
     }
 
     @Test
@@ -30,12 +30,12 @@ class MdBasicTest : MdTestCase() {
             """
             #### Hello
             """.trimIndent(),
-            fileContent()
+            fileContent().trim()
         )
     }
 
     @Test
-    fun `Can create # Title with paragraph`() {
+    fun `Adds two new lines after heading`() {
         // Act
         md.start {
             section {
@@ -48,9 +48,10 @@ class MdBasicTest : MdTestCase() {
         assertEquals(
             """
             # Hello World
+            
             I am a paragraph.
             """.trimIndent(),
-            fileContent()
+            fileContent().trim()
         )
     }
 
@@ -71,7 +72,28 @@ class MdBasicTest : MdTestCase() {
             
             # Hello World
             """.trimIndent(),
-            fileContent()
+            fileContent().trim()
+        )
+    }
+
+    @Test
+    fun `Adds two new lines between paragraph and next list`() {
+        // Act
+        md.start {
+            paragraph("I am a paragraph.")
+            list {
+                -"List Item"
+            }
+        }
+
+        // Assert
+        assertEquals(
+            """
+            I am a paragraph.
+            
+            - List Item
+            """.trimIndent(),
+            fileContent().trim()
         )
     }
 
@@ -90,7 +112,7 @@ class MdBasicTest : MdTestCase() {
             
             Second paragraph.
             """.trimIndent(),
-            fileContent()
+            fileContent().trim()
         )
     }
 
@@ -107,9 +129,10 @@ class MdBasicTest : MdTestCase() {
         assertEquals(
             """
             # Hello World
+            
             ## Subsection
             """.trimIndent(),
-            fileContent()
+            fileContent().trim()
         )
     }
 
@@ -131,9 +154,21 @@ class MdBasicTest : MdTestCase() {
         assertEquals(
             """
             # Hello World
+            
             ## Subsection
+            
             ### Subsubsection
             """.trimIndent(),
+            fileContent().trim()
+        )
+    }
+
+    @Test
+    fun `Adds newline in the end`() {
+        md.start { }
+
+        assertEquals(
+            "\n",
             fileContent()
         )
     }
