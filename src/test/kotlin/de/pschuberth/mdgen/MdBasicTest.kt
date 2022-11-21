@@ -35,7 +35,7 @@ class MdBasicTest : MdTestCase() {
     }
 
     @Test
-    fun `Can create # Title with paragraph`() {
+    fun `Adds two new lines after heading`() {
         // Act
         md.start {
             section {
@@ -48,6 +48,7 @@ class MdBasicTest : MdTestCase() {
         assertEquals(
             """
             # Hello World
+            
             I am a paragraph.
             """.trimIndent(),
             fileContent()
@@ -70,6 +71,27 @@ class MdBasicTest : MdTestCase() {
             I am a paragraph.
             
             # Hello World
+            """.trimIndent(),
+            fileContent()
+        )
+    }
+
+    @Test
+    fun `Adds two new lines between paragraph and next list`() {
+        // Act
+        md.start {
+            paragraph("I am a paragraph.")
+            list {
+                -"List Item"
+            }
+        }
+
+        // Assert
+        assertEquals(
+            """
+            I am a paragraph.
+            
+            - List Item
             """.trimIndent(),
             fileContent()
         )
@@ -107,6 +129,7 @@ class MdBasicTest : MdTestCase() {
         assertEquals(
             """
             # Hello World
+            
             ## Subsection
             """.trimIndent(),
             fileContent()
@@ -131,9 +154,21 @@ class MdBasicTest : MdTestCase() {
         assertEquals(
             """
             # Hello World
+            
             ## Subsection
+            
             ### Subsubsection
             """.trimIndent(),
+            fileContent()
+        )
+    }
+
+    @Test
+    fun `Adds newline in the end`() {
+        md.start { }
+
+        assertEquals(
+            "\n".trimIndent(),
             fileContent()
         )
     }

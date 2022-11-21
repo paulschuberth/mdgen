@@ -24,10 +24,11 @@ class Md(private val outputStream: OutputStream) {
             val previous = pair.first
             val current = pair.second
 
-            if (previous is MdParagraph && current is MdParagraph) {
+            if (previous is MdParagraph) {
                 separator = "\n\n"
             }
-            if (previous is MdParagraph && current is MdSection) {
+
+            if (previous is MdSection) {
                 separator = "\n\n"
             }
             outputStream.write("$separator$current".toByteArray())
