@@ -24,5 +24,6 @@ abstract class MdTestCase {
         }
     }
 
-    protected fun fileContent() = file.readText(Charset.defaultCharset())
+    protected fun fileContent() = this.fileContent(file)
+    protected fun fileContent(file: File) = file.readText(Charset.defaultCharset())
 }
