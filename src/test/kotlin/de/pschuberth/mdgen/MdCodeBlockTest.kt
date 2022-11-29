@@ -1,7 +1,6 @@
 package de.pschuberth.mdgen
 
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class MdCodeBlockTest : MdTestCase() {
     @Test
@@ -18,15 +17,14 @@ class MdCodeBlockTest : MdTestCase() {
         }
 
         // Assert
-        assertEquals(
+        assertFileContentIs(
             """
             ```
             fun foo(): String {
                 return "bar"
             }
             ```
-            """.trimIndent(),
-            fileContent().trim()
+            """.trimIndent()
         )
     }
 
@@ -44,15 +42,14 @@ class MdCodeBlockTest : MdTestCase() {
         }
 
         // Assert
-        assertEquals(
+        assertFileContentIs(
             """
             ```kotlin
             fun foo(): String {
                 return "bar"
             }
             ```
-            """.trimIndent(),
-            fileContent().trim()
+            """.trimIndent()
         )
     }
 }

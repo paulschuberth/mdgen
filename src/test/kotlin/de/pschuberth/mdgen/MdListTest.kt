@@ -1,7 +1,6 @@
 package de.pschuberth.mdgen
 
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class MdListTest : MdTestCase() {
 
@@ -16,13 +15,12 @@ class MdListTest : MdTestCase() {
         }
 
         // Assert
-        assertEquals(
+        assertFileContentIs(
             """
             - First
             - Second
             - Third
-            """.trimIndent(),
-            fileContent().trim()
+            """.trimIndent()
         )
     }
 
@@ -37,13 +35,12 @@ class MdListTest : MdTestCase() {
         }
 
         // Assert
-        assertEquals(
+        assertFileContentIs(
             """
             1. First
             2. Second
             3. Third
-            """.trimIndent(),
-            fileContent().trim()
+            """.trimIndent()
         )
     }
 
@@ -59,13 +56,12 @@ class MdListTest : MdTestCase() {
         }
 
         // Assert
-        assertEquals(
+        assertFileContentIs(
             """
             23. First
             24. Second
             25. Third
-            """.trimIndent(),
-            fileContent().trim()
+            """.trimIndent()
         )
     }
 
@@ -84,15 +80,14 @@ class MdListTest : MdTestCase() {
         }
 
         // Assert
-        assertEquals(
+        assertFileContentIs(
             """
             - First
             - Second
                 1. First nested
                 2. Second nested
             - Third
-            """.trimIndent(),
-            fileContent().trim()
+            """.trimIndent()
         )
     }
 
@@ -111,15 +106,14 @@ class MdListTest : MdTestCase() {
         }
 
         // Assert
-        assertEquals(
+        assertFileContentIs(
             """
             1. First
             2. Second
                 - First nested
                 - Second nested
             3. Third
-            """.trimIndent(),
-            fileContent().trim()
+            """.trimIndent()
         )
     }
 
@@ -138,15 +132,14 @@ class MdListTest : MdTestCase() {
         }
 
         // Assert
-        assertEquals(
+        assertFileContentIs(
             """
             - First
             - Second
                 - First nested
                 - Second nested
             - Third
-            """.trimIndent(),
-            fileContent().trim()
+            """.trimIndent()
         )
     }
 
@@ -165,15 +158,14 @@ class MdListTest : MdTestCase() {
         }
 
         // Assert
-        assertEquals(
+        assertFileContentIs(
             """
             1. First
             2. Second
                 1. First nested
                 2. Second nested
             3. Third
-            """.trimIndent(),
-            fileContent().trim()
+            """.trimIndent()
         )
     }
 }
