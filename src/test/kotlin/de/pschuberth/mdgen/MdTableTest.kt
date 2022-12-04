@@ -148,4 +148,22 @@ class MdTableTest : MdTestCase() {
             """.trimIndent()
         )
     }
+
+    @Test
+    fun `Can add cells to row using infix plus`() {
+        md.start {
+            table("Hello", "Beautiful", "World") {
+                row {
+                    +"Foo" + "Bar" + "Baz"
+                }
+            }
+        }
+        assertFileContentIs(
+            """
+            | Hello | Beautiful | World |
+            | --- | --- | --- |
+            | Foo | Bar | Baz |
+            """.trimIndent()
+        )
+    }
 }

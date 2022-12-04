@@ -45,11 +45,18 @@ class MdTableHeader constructor(
     }
 }
 
-class MdTableRow() {
+class MdTableRow {
     private val cells = mutableListOf<String>()
-    operator fun String.unaryPlus() {
+    operator fun String.unaryPlus(): MdTableRow {
         cells.add(this)
+        return this@MdTableRow
     }
+
+    operator fun plus(cell: String): MdTableRow {
+        cells.add(cell)
+        return this@MdTableRow
+    }
+
 
     override fun toString(): String {
         return buildString {
