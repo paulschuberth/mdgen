@@ -4,6 +4,7 @@ plugins {
     kotlin("jvm") version "1.7.22"
     `java-library`
     `maven-publish`
+    id("org.jetbrains.kotlinx.kover") version "0.6.1"
 }
 
 group = "de.pschuberth"
