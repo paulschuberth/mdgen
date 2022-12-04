@@ -16,9 +16,10 @@ class MdTable(md: Md, private val headers: Array<out MdTableHeader>, body: (MdTa
             append("|\n")
             for (header in headers) {
                 val alignmentString = when (header.alignment) {
-                    MdTableHeader.Alignment.CENTER -> "| --- "
+                    MdTableHeader.Alignment.CENTER -> "| :---: "
                     MdTableHeader.Alignment.LEFT -> "| :--- "
                     MdTableHeader.Alignment.RIGHT -> "| ---: "
+                    MdTableHeader.Alignment.UNSPECIFIED -> "| --- "
                 }
                 append(alignmentString)
             }
@@ -41,7 +42,7 @@ class MdTableHeader constructor(
     val alignment: Alignment
 ) {
     enum class Alignment {
-        LEFT, CENTER, RIGHT
+        LEFT, CENTER, RIGHT, UNSPECIFIED
     }
 }
 

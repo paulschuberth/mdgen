@@ -200,7 +200,7 @@ class ReadmeTest : MdTestCase() {
                         """
                         val md = Md(FileOutputStream(File("README.md")))
                         md.start {
-                            table("Hello", "Beautiful", "World") {
+                            table("Hello" to LEFT, "Beautiful" to CENTER, "World" to RIGHT) {
                                 row {
                                     +"Foo" + "Bar" + "Baz"
                                 }
