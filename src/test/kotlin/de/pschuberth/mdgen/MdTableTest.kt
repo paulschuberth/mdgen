@@ -75,7 +75,7 @@ class MdTableTest : MdTestCase() {
         assertFileContentIs(
             """
             | Center |
-            | --- |
+            | :---: |
             """.trimIndent()
         )
     }
@@ -89,7 +89,7 @@ class MdTableTest : MdTestCase() {
         assertFileContentIs(
             """
             | Left | Center | Right |
-            | :--- | --- | ---: |
+            | :--- | :---: | ---: |
             """.trimIndent()
         )
     }
