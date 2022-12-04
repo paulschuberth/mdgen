@@ -1,5 +1,28 @@
 # Changelog
 
+## [0.2.3](https://github.com/paulschuberth/mdgen/compare/v0.2.2...v0.2.3) (2022-12-04)
+
+
+### Features
+
+* Add table support ([#16](https://github.com/paulschuberth/mdgen/issues/16)) ([f710a91](https://github.com/paulschuberth/mdgen/commit/f710a918996651f8b7431b0fdab9cb472627546b))
+
+
+### Bug Fixes
+
+* Center alignment of column content using wrong syntax ([#17](https://github.com/paulschuberth/mdgen/issues/17)) ([65ab627](https://github.com/paulschuberth/mdgen/commit/65ab627a0510a7a51fd360a1efcb2a78d4e9083f))
+
+
+### Miscellaneous
+
+* Add kover code coverage reports ([1720674](https://github.com/paulschuberth/mdgen/commit/1720674deb9bf741794cc3a8b57749bd81f2755f))
+* Add kover code coverage reports ([#18](https://github.com/paulschuberth/mdgen/issues/18)) ([4cd835f](https://github.com/paulschuberth/mdgen/commit/4cd835ffa0abc0bc01fdd430c5b97ebadc83bbb9))
+* Apply formatting rules for newlines between elements ([be4e95e](https://github.com/paulschuberth/mdgen/commit/be4e95e60fded5ffc72c55f63ba3b4226da2013b))
+* **deps:** bump jvm from 1.7.21 to 1.7.22 ([eb2079b](https://github.com/paulschuberth/mdgen/commit/eb2079b8fc7e211a81ea6556eb118e1962abe943))
+* **deps:** bump jvm from 1.7.21 to 1.7.22 ([#15](https://github.com/paulschuberth/mdgen/issues/15)) ([bcb47b3](https://github.com/paulschuberth/mdgen/commit/bcb47b3155dc84588b756f81c8ffa9b7a90b6188))
+* **main:** release 0.2.3-SNAPSHOT ([c5689c4](https://github.com/paulschuberth/mdgen/commit/c5689c41f78ff1f5ef7785f715bdf7724a2121af))
+* **main:** release 0.2.3-SNAPSHOT ([#12](https://github.com/paulschuberth/mdgen/issues/12)) ([bf7b818](https://github.com/paulschuberth/mdgen/commit/bf7b818ebb232757c8038e1293fe67516d14c41a))
+
 ## [0.2.2](https://github.com/paulschuberth/mdgen/compare/v0.2.1...v0.2.2) (2022-11-20)
 
 
