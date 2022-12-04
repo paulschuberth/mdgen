@@ -13,7 +13,7 @@ class MdBasicTest : MdTestCase() {
         }
 
         // Assert
-        assertEquals("# Hello World", fileContent().trim())
+        assertFileContentIs("# Hello World")
     }
 
     @Test
@@ -26,12 +26,7 @@ class MdBasicTest : MdTestCase() {
         }
 
         // Assert
-        assertEquals(
-            """
-            #### Hello
-            """.trimIndent(),
-            fileContent().trim()
-        )
+        assertFileContentIs("#### Hello")
     }
 
     @Test
@@ -45,13 +40,12 @@ class MdBasicTest : MdTestCase() {
         }
 
         // Assert
-        assertEquals(
+        assertFileContentIs(
             """
             # Hello World
             
             I am a paragraph.
-            """.trimIndent(),
-            fileContent().trim()
+            """.trimIndent()
         )
     }
 
@@ -66,13 +60,12 @@ class MdBasicTest : MdTestCase() {
         }
 
         // Assert
-        assertEquals(
+        assertFileContentIs(
             """
             I am a paragraph.
             
             # Hello World
-            """.trimIndent(),
-            fileContent().trim()
+            """.trimIndent()
         )
     }
 
@@ -87,13 +80,12 @@ class MdBasicTest : MdTestCase() {
         }
 
         // Assert
-        assertEquals(
+        assertFileContentIs(
             """
             I am a paragraph.
             
             - List Item
-            """.trimIndent(),
-            fileContent().trim()
+            """.trimIndent()
         )
     }
 
@@ -106,13 +98,12 @@ class MdBasicTest : MdTestCase() {
         }
 
         // Assert
-        assertEquals(
+        assertFileContentIs(
             """
             First paragraph.
             
             Second paragraph.
-            """.trimIndent(),
-            fileContent().trim()
+            """.trimIndent()
         )
     }
 
@@ -126,13 +117,12 @@ class MdBasicTest : MdTestCase() {
             }
         }
         // Assert
-        assertEquals(
+        assertFileContentIs(
             """
             # Hello World
             
             ## Subsection
-            """.trimIndent(),
-            fileContent().trim()
+            """.trimIndent()
         )
     }
 
@@ -151,15 +141,14 @@ class MdBasicTest : MdTestCase() {
             }
         }
         // Assert
-        assertEquals(
+        assertFileContentIs(
             """
             # Hello World
             
             ## Subsection
             
             ### Subsubsection
-            """.trimIndent(),
-            fileContent().trim()
+            """.trimIndent()
         )
     }
 

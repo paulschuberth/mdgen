@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach
 import java.io.File
 import java.io.FileOutputStream
 import java.nio.charset.Charset
+import kotlin.test.assertEquals
 
 abstract class MdTestCase {
     protected lateinit var file: File
@@ -26,4 +27,7 @@ abstract class MdTestCase {
 
     protected fun fileContent() = this.fileContent(file)
     protected fun fileContent(file: File) = file.readText(Charset.defaultCharset())
+    protected fun assertFileContentIs(expectedContent: String) {
+        assertEquals(expectedContent, fileContent().trim())
+    }
 }
