@@ -43,3 +43,17 @@ jobs:
         with:
           name: test-results
           path: build/test-results/test
+
+      - name: Generate kover coverage report
+        run: ./gradlew koverXmlReport
+
+      - name: Add coverage report to PR
+        id: kover
+        uses: mi-kas/kover-report@v1
+        with:
+          path: ${{ github.workspace }}/build/reports/kover/xml/report.xml
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: Code Coverage
+          update-comment: true
+          min-coverage-overall: 98
+          min-coverage-changed-files: 98
