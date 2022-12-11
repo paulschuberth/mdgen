@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.2.4](https://github.com/paulschuberth/mdgen/compare/v0.2.3...v0.2.4) (2022-12-11)
+
+
+### Miscellaneous
+
+* Build with Java 8 ([#22](https://github.com/paulschuberth/mdgen/issues/22)) ([e15f784](https://github.com/paulschuberth/mdgen/commit/e15f784d87e95fffdc055a2a911a8cb61645f52e))
+* Change name of publication ([#20](https://github.com/paulschuberth/mdgen/issues/20)) ([dd0eb3b](https://github.com/paulschuberth/mdgen/commit/dd0eb3becdf2088dd96bd35eba642c04903eb048))
+* **main:** release 0.2.4-SNAPSHOT ([8d40cff](https://github.com/paulschuberth/mdgen/commit/8d40cff88bcbfdc59d0868495142b720c8937b7d))
+* **main:** release 0.2.4-SNAPSHOT ([#19](https://github.com/paulschuberth/mdgen/issues/19)) ([ed96d71](https://github.com/paulschuberth/mdgen/commit/ed96d715d428f8b6149ba84cc35ae49789f787ee))
+
 ## [0.2.3](https://github.com/paulschuberth/mdgen/compare/v0.2.2...v0.2.3) (2022-12-04)
 
 
