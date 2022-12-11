@@ -45,7 +45,7 @@ publishing {
         }
     }
     publications {
-        register<MavenPublication>("gpr") {
+        create<MavenPublication>("mdgen") {
             from(components["java"])
         }
     }
