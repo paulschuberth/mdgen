@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.2.5](https://github.com/paulschuberth/mdgen/compare/v0.2.4...v0.2.5) (2022-12-15)
+
+
+### Bug Fixes
+
+* Don't add trailing newline ([07f22cb](https://github.com/paulschuberth/mdgen/commit/07f22cb3ef5a151c967b89c271c08407998d7ddb))
+
+
+### Miscellaneous
+
+* **main:** release 0.2.5-SNAPSHOT ([05c1ec3](https://github.com/paulschuberth/mdgen/commit/05c1ec3cc44e74b4c3194e888a5e10e8cb6df99e))
+* **main:** release 0.2.5-SNAPSHOT ([#23](https://github.com/paulschuberth/mdgen/issues/23)) ([b519981](https://github.com/paulschuberth/mdgen/commit/b519981195af9c5585ea2a2b900dd3f26f704751))
+
 ## [0.2.4](https://github.com/paulschuberth/mdgen/compare/v0.2.3...v0.2.4) (2022-12-11)
 
 
