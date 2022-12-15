@@ -33,5 +33,6 @@ class Md(private val outputStream: OutputStream) {
             }
             outputStream.write("$separator$current".toByteArray())
         }
+        outputStream.close()
     }
 }
