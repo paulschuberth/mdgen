@@ -153,11 +153,10 @@ class MdBasicTest : MdTestCase() {
     }
 
     @Test
-    fun `Adds newline in the end`() {
+    fun `Adds no newline in the end`() {
         md.start { }
-
         assertEquals(
-            "\n",
+            "",
             fileContent()
         )
     }
