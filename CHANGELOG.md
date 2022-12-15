@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.2.6](https://github.com/paulschuberth/mdgen/compare/v0.2.5...v0.2.6) (2022-12-15)
+
+
+### Bug Fixes
+
+* Close OutputStream after rendering ([aa856f4](https://github.com/paulschuberth/mdgen/commit/aa856f4eb07a5465c41dd7384b11ae20b2314056))
+
+
+### Miscellaneous
+
+* **main:** release 0.2.6-SNAPSHOT ([9edb6b7](https://github.com/paulschuberth/mdgen/commit/9edb6b7cea84e244b2a1edb7291b724df449cc4b))
+* **main:** release 0.2.6-SNAPSHOT ([#25](https://github.com/paulschuberth/mdgen/issues/25)) ([5a1b4ba](https://github.com/paulschuberth/mdgen/commit/5a1b4bac970dc28244d59300b149f499e955da7b))
+
 ## [0.2.5](https://github.com/paulschuberth/mdgen/compare/v0.2.4...v0.2.5) (2022-12-15)
 
 
