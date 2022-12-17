@@ -9,7 +9,7 @@ plugins {
 
 group = "de.pschuberth"
 // x-release-please-start-version
-version = "0.2.6"
+version = "0.2.7-SNAPSHOT"
 // x-release-please-end
 
 java {
