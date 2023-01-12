@@ -28,7 +28,7 @@ sealed class MdElement(private val md: Md) {
         md.add(mdCodeBlock)
     }
 
-    fun table(vararg headlines: Pair<String, MdTableHeader.Alignment>, body: (MdTable.() -> Unit)? = null) {
+    fun table(vararg headlines: Pair<String, Alignment>, body: (MdTable.() -> Unit)? = null) {
         val headers = buildList {
             for (headline in headlines) {
                 add(MdTableHeader(headline.first, headline.second))
@@ -41,7 +41,7 @@ sealed class MdElement(private val md: Md) {
     fun table(vararg headlines: String, body: (MdTable.() -> Unit)? = null) {
         val headers = buildList {
             for (headline in headlines) {
-                add(MdTableHeader(headline, MdTableHeader.Alignment.UNSPECIFIED))
+                add(MdTableHeader(headline, Alignment.UNSPECIFIED))
             }
         }
         val table = MdTable(md, headers.toTypedArray(), body)
