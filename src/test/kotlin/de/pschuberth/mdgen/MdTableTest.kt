@@ -16,8 +16,8 @@ class MdTableTest : MdTestCase() {
 
         assertFileContentIs(
             """
-            |  A  |
-            |-----|
+            | A   |
+            |:----|
             """.trimIndent()
         )
     }
@@ -30,8 +30,8 @@ class MdTableTest : MdTestCase() {
 
         assertFileContentIs(
             """
-            |  A  |  B  |  C  |
-            |-----|-----|-----|
+            | A   | B   | C   |
+            |:----|:----|:----|
             """.trimIndent()
         )
     }
@@ -79,6 +79,23 @@ class MdTableTest : MdTestCase() {
     }
 
     @Test
+    fun `Can create simple table with unspecified alignment`() {
+        md.start {
+            table("Unspecified") {
+                row { +"Bar" }
+            }
+        }
+
+        assertFileContentIs(
+            """
+            | Unspecified |
+            |:------------|
+            | Bar         |
+            """.trimIndent()
+        )
+    }
+
+    @Test
     fun `Can create table header with multiple alignments`() {
         md.start {
             table("Left" to LEFT, "Center" to CENTER, "Right" to RIGHT)
@@ -118,10 +135,11 @@ class MdTableTest : MdTestCase() {
                 }
             }
         }
+        //language=Markdown
         assertFileContentIs(
             """
             | Hello |
-            |-------|
+            |:------|
             | World |
             """.trimIndent()
         )
@@ -137,8 +155,8 @@ class MdTableTest : MdTestCase() {
         assertFileContentIs(
             """
             | Hello | World |
-            |-------|-------|
-            |  Foo  |  Bar  |
+            |:------|:------|
+            | Foo   | Bar   |
             """.trimIndent()
         )
     }

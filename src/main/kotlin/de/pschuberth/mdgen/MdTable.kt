@@ -65,19 +65,18 @@ private fun Array<out MdTableHeader>.alignments(): List<Alignment> {
 }
 
 enum class Alignment {
-    LEFT, CENTER, RIGHT, UNSPECIFIED
+    LEFT, CENTER, RIGHT
 }
 
 class MdTableHeader constructor(
     val content: String,
-    val alignment: Alignment
+    val alignment: Alignment = Alignment.LEFT
 ) {
 
     fun alignmentStringFor(maxWidth: Int) = when (alignment) {
         Alignment.CENTER -> ":${"-".repeat(maxWidth)}:"
         Alignment.LEFT -> ":${"-".repeat(maxWidth + 1)}"
         Alignment.RIGHT -> "${"-".repeat(maxWidth + 1)}:"
-        Alignment.UNSPECIFIED -> "-".repeat(maxWidth + 2)
     }
 }
 

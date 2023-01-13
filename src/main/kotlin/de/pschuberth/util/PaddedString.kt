@@ -6,7 +6,7 @@ class PaddedString(
     private val value: String,
     private val length: Int,
     private val fixedLength: Int? = null,
-    private val alignment: Alignment = Alignment.CENTER
+    private val alignment: Alignment = Alignment.LEFT
 ) {
 
     init {

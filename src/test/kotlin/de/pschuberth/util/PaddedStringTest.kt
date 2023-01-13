@@ -26,6 +26,12 @@ class PaddedStringTest {
     }
 
     @Test
+    fun `Unspecfied alignment uses left as default`() {
+        val paddedString = PaddedString(value = "Foo", length = 7, fixedLength = 1)
+        assertEquals(" Foo   ", paddedString.toString())
+    }
+
+    @Test
     fun `Can use fixed length postfix`() {
         val paddedString = PaddedString(value = "Foo", length = 7, fixedLength = 1, alignment = Alignment.RIGHT)
         assertEquals("   Foo ", paddedString.toString())
