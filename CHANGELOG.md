@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.2.8](https://github.com/paulschuberth/mdgen/compare/v0.2.7...v0.2.8) (2023-01-13)
+
+
+### Bug Fixes
+
+* Use left alignment by default ([#32](https://github.com/paulschuberth/mdgen/issues/32)) ([c4ba148](https://github.com/paulschuberth/mdgen/commit/c4ba148bf17d62c3b693884d12d675dd42fe3eac))
+
+
+### Miscellaneous
+
+* **main:** release 0.2.8-SNAPSHOT ([8a46dde](https://github.com/paulschuberth/mdgen/commit/8a46dde75cd4cccc5e61a4da8ab3e83cb495b2be))
+* **main:** release 0.2.8-SNAPSHOT ([#31](https://github.com/paulschuberth/mdgen/issues/31)) ([615d911](https://github.com/paulschuberth/mdgen/commit/615d9119f5ac61621605653343dda7e2523fa2e7))
+
 ## [0.2.7](https://github.com/paulschuberth/mdgen/compare/v0.2.6...v0.2.7) (2023-01-13)
 
 
