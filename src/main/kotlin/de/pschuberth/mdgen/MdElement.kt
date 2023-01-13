@@ -41,7 +41,7 @@ sealed class MdElement(private val md: Md) {
     fun table(vararg headlines: String, body: (MdTable.() -> Unit)? = null) {
         val headers = buildList {
             for (headline in headlines) {
-                add(MdTableHeader(headline, Alignment.UNSPECIFIED))
+                add(MdTableHeader(headline))
             }
         }
         val table = MdTable(md, headers.toTypedArray(), body)
