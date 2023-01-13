@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.2.7](https://github.com/paulschuberth/mdgen/compare/v0.2.6...v0.2.7) (2023-01-13)
+
+
+### Features
+
+* Add proper table formatting ([#30](https://github.com/paulschuberth/mdgen/issues/30)) ([3705317](https://github.com/paulschuberth/mdgen/commit/3705317390e9dddab5fb75b0c9f8dfc588804b3f))
+
+
+### Miscellaneous
+
+* **deps:** bump jvm from 1.7.22 to 1.8.0 ([948acdd](https://github.com/paulschuberth/mdgen/commit/948acdd556bc4923b6a30604078545c646ae5b4f))
+* **deps:** bump jvm from 1.7.22 to 1.8.0 ([#29](https://github.com/paulschuberth/mdgen/issues/29)) ([e20d9b0](https://github.com/paulschuberth/mdgen/commit/e20d9b0a0aaea2da563196b195deda2f67a999f0))
+* **main:** release 0.2.7-SNAPSHOT ([500332f](https://github.com/paulschuberth/mdgen/commit/500332f8f668a09e369b1fa4702e0005428e98fd))
+* **main:** release 0.2.7-SNAPSHOT ([#27](https://github.com/paulschuberth/mdgen/issues/27)) ([5a0aac7](https://github.com/paulschuberth/mdgen/commit/5a0aac7ad93614391f4d7c29dbcfaa8de31dc038))
+* Prevent editor from adding final newline to Markdown files ([5d5223d](https://github.com/paulschuberth/mdgen/commit/5d5223d93b56818e6993dad91cb150f3059ede4a))
+
 ## [0.2.6](https://github.com/paulschuberth/mdgen/compare/v0.2.5...v0.2.6) (2022-12-15)
 
 
