@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.9](https://github.com/paulschuberth/mdgen/compare/v0.2.8...v0.2.9) (2023-02-04)
+
+
+### Miscellaneous
+
+* **deps:** bump jvm from 1.8.0 to 1.8.10 ([5293810](https://github.com/paulschuberth/mdgen/commit/5293810ab7057725ccd720b6ff219eba5f09fae3))
+* **main:** release 0.2.9-SNAPSHOT ([9055f94](https://github.com/paulschuberth/mdgen/commit/9055f94ba1fd12b4bf172448eaf67c88a116bebb))
+
 ## [0.2.8](https://github.com/paulschuberth/mdgen/compare/v0.2.7...v0.2.8) (2023-01-13)
 
 
