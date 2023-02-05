@@ -1,0 +1,22 @@
+{
+  "packages": {
+    ".": {
+      "changelog-path": "CHANGELOG.md",
+      "release-type": "java",
+      "skip-snapshot": true,
+      "bump-minor-pre-major": true,
+      "bump-patch-for-minor-pre-major": true,
+      "draft": false,
+      "prerelease": false,
+      "extra-files": [
+        "build.gradle.kts"
+      ],
+      "changelog-sections": [
+        {"type":"feat","section":"Features","hidden":false},
+        {"type":"fix","section":"Bug Fixes","hidden":false},
+        {"type":"chore","section":"Miscellaneous","hidden":false}
+      ] 
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
+}
