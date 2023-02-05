@@ -11,14 +11,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: google-github-actions/release-please-action@v3
+        id: release-please
         with:
           token: ${{ secrets.PAT }}
           config-file: release-please-config.json
           release-type: java
+    outputs:
+      releases_created: ${{ steps.release-please.outputs.releases_created }}
 
   publish:
     runs-on: ubuntu-latest
     needs: [ release-please ]
+    if: ${{ needs.release-please.outputs.releases_created }}
     permissions:
       contents: read
       packages: write
