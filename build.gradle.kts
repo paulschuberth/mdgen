@@ -5,6 +5,7 @@ plugins {
     `java-library`
     `maven-publish`
     id("org.jetbrains.kotlinx.kover") version "0.6.1"
+    id("org.jetbrains.dokka") version "1.8.10"
 }
 
 group = "de.pschuberth"
