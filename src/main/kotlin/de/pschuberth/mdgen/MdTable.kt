@@ -18,12 +18,12 @@ class MdTable(md: Md, private val headers: Array<out MdTableHeader>, body: (MdTa
                 val header = headers[i]
                 append(
                     "|${
-                    PaddedString(
-                        value = header.content,
-                        length = maxWidths[i] + 2,
-                        prefixLength = 1
-                    )
-                    }"
+                        PaddedString(
+                            value = header.content,
+                            length = maxWidths[i] + 2,
+                            prefixLength = 1,
+                        )
+                    }",
                 )
             }
             append("|\n")
@@ -70,7 +70,7 @@ enum class Alignment {
 
 class MdTableHeader constructor(
     val content: String,
-    val alignment: Alignment = Alignment.LEFT
+    val alignment: Alignment = Alignment.LEFT,
 ) {
 
     fun alignmentStringFor(maxWidth: Int) = when (alignment) {
@@ -98,13 +98,13 @@ class MdTableRow {
                 val cell = cells[i]
                 append(
                     "|${
-                    PaddedString(
-                        value = cell,
-                        length = withLength[i] + 2,
-                        prefixLength = 1,
-                        alignment = andAlignments[i]
-                    )
-                    }"
+                        PaddedString(
+                            value = cell,
+                            length = withLength[i] + 2,
+                            prefixLength = 1,
+                            alignment = andAlignments[i],
+                        )
+                    }",
                 )
             }
             append("|\n")

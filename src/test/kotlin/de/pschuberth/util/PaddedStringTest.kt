@@ -26,7 +26,7 @@ class PaddedStringTest {
     }
 
     @Test
-    fun `Unspecfied alignment uses left as default`() {
+    fun `Unspecified alignment uses left as default`() {
         val paddedString = PaddedString(value = "Foo", length = 7, prefixLength = 1)
         assertEquals(" Foo   ", paddedString.toString())
     }
@@ -42,7 +42,7 @@ class PaddedStringTest {
         assertThrows<IllegalArgumentException> {
             PaddedString(
                 value = "Foo Bar Baz",
-                length = 2
+                length = 2,
             )
         }
     }
@@ -54,7 +54,7 @@ class PaddedStringTest {
                 value = "Foo",
                 length = 3,
                 prefixLength = 1,
-                alignment = Alignment.LEFT
+                alignment = Alignment.LEFT,
             )
         }
     }
@@ -66,7 +66,7 @@ class PaddedStringTest {
                 value = "Foo",
                 length = 3,
                 prefixLength = 1,
-                alignment = Alignment.RIGHT
+                alignment = Alignment.RIGHT,
             )
         }
     }
