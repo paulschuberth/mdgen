@@ -2,17 +2,19 @@ package de.pschuberth.util
 
 import de.pschuberth.mdgen.Alignment
 
+/**
+ * A space padded [String]
+ */
 class PaddedString(
     private val value: String,
     private val length: Int,
-    private val fixedLength: Int? = null,
+    private val prefixLength: Int? = null,
     private val alignment: Alignment = Alignment.LEFT
 ) {
 
     init {
-
-        if (value.length == length && fixedLength != null) {
-            throw IllegalArgumentException("Length ($length) must be greater than length of value ($value, $length) plus prefix length ($fixedLength)")
+        if (value.length == length && prefixLength != null) {
+            throw IllegalArgumentException("Length ($length) must be greater than length of value ($value, $length) plus prefix length ($prefixLength)")
         }
 
         if (value.length > length) {
@@ -32,21 +34,21 @@ class PaddedString(
     }
 
     private fun lengthOfFirstPadding(remainder: Int): Int {
-        if (fixedLength != null && alignment == Alignment.LEFT) {
-            return fixedLength
+        if (prefixLength != null && alignment == Alignment.LEFT) {
+            return prefixLength
         }
-        if (fixedLength != null && alignment == Alignment.RIGHT) {
-            return remainder - fixedLength
+        if (prefixLength != null && alignment == Alignment.RIGHT) {
+            return remainder - prefixLength
         }
         return (remainder / 2)
     }
 
     private fun lengthOfSecondPadding(remainder: Int): Int {
-        if (fixedLength != null && alignment == Alignment.LEFT) {
+        if (prefixLength != null && alignment == Alignment.LEFT) {
             return remainder - 1
         }
-        if (fixedLength != null && alignment == Alignment.RIGHT) {
-            return fixedLength
+        if (prefixLength != null && alignment == Alignment.RIGHT) {
+            return prefixLength
         }
         return if (remainder % 2 == 0) {
             remainder / 2

@@ -21,7 +21,7 @@ class MdTable(md: Md, private val headers: Array<out MdTableHeader>, body: (MdTa
                     PaddedString(
                         value = header.content,
                         length = maxWidths[i] + 2,
-                        fixedLength = 1
+                        prefixLength = 1
                     )
                     }"
                 )
@@ -101,7 +101,7 @@ class MdTableRow {
                     PaddedString(
                         value = cell,
                         length = withLength[i] + 2,
-                        fixedLength = 1,
+                        prefixLength = 1,
                         alignment = andAlignments[i]
                     )
                     }"

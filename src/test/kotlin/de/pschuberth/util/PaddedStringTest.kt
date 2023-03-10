@@ -21,19 +21,19 @@ class PaddedStringTest {
 
     @Test
     fun `Can use fixed length prefix`() {
-        val paddedString = PaddedString(value = "Foo", length = 7, fixedLength = 1, Alignment.LEFT)
+        val paddedString = PaddedString(value = "Foo", length = 7, prefixLength = 1, Alignment.LEFT)
         assertEquals(" Foo   ", paddedString.toString())
     }
 
     @Test
     fun `Unspecfied alignment uses left as default`() {
-        val paddedString = PaddedString(value = "Foo", length = 7, fixedLength = 1)
+        val paddedString = PaddedString(value = "Foo", length = 7, prefixLength = 1)
         assertEquals(" Foo   ", paddedString.toString())
     }
 
     @Test
     fun `Can use fixed length postfix`() {
-        val paddedString = PaddedString(value = "Foo", length = 7, fixedLength = 1, alignment = Alignment.RIGHT)
+        val paddedString = PaddedString(value = "Foo", length = 7, prefixLength = 1, alignment = Alignment.RIGHT)
         assertEquals("   Foo ", paddedString.toString())
     }
 
@@ -53,7 +53,7 @@ class PaddedStringTest {
             PaddedString(
                 value = "Foo",
                 length = 3,
-                fixedLength = 1,
+                prefixLength = 1,
                 alignment = Alignment.LEFT
             )
         }
@@ -65,7 +65,7 @@ class PaddedStringTest {
             PaddedString(
                 value = "Foo",
                 length = 3,
-                fixedLength = 1,
+                prefixLength = 1,
                 alignment = Alignment.RIGHT
             )
         }
