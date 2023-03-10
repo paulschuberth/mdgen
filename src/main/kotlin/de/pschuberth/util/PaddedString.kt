@@ -3,13 +3,21 @@ package de.pschuberth.util
 import de.pschuberth.mdgen.Alignment
 
 /**
- * A space padded [String]
+ * A space padded [String] with [value] as content.
+ *
+ * If [prefixLength] is not null and [alignment] is either
+ * [Alignment.LEFT] or [Alignment.RIGHT] the final String starts or ends with [prefixLength] spaces. It assumes LTR
+ * reading. The remaining spaces are put after [value]. If [alignment] is equal to [Alignment.CENTER] the prefixLength is ignored.
+ *
+ * @exception IllegalArgumentException if the length of the [value] is bigger than the length of the [PaddedString] itself.
+ * @exception IllegalArgumentException if the length of [value] is equal to [length] and [prefixLength] is not null.
+ *
  */
-class PaddedString(
+class PaddedString constructor(
     private val value: String,
     private val length: Int,
     private val prefixLength: Int? = null,
-    private val alignment: Alignment = Alignment.LEFT
+    private val alignment: Alignment = Alignment.LEFT,
 ) {
 
     init {
@@ -22,6 +30,9 @@ class PaddedString(
         }
     }
 
+    /**
+     * Builds a new String that matches the requirements described by the constructor parameters.
+     */
     override fun toString(): String {
         val remainder = length - value.length
         val firstPadding = lengthOfFirstPadding(remainder)
