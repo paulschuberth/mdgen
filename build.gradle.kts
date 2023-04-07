@@ -16,6 +16,8 @@ version = "0.2.9"
 java {
     withJavadocJar()
     withSourcesJar()
+
+    targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 repositories {
