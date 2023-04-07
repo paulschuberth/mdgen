@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.8.10"
+    kotlin("jvm") version "1.8.20"
     `java-library`
     `maven-publish`
     id("org.jetbrains.kotlinx.kover") version "0.6.1"
@@ -16,6 +16,8 @@ version = "0.2.9"
 java {
     withJavadocJar()
     withSourcesJar()
+
+    targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 repositories {

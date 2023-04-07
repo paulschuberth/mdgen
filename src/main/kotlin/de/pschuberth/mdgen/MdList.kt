@@ -5,7 +5,7 @@ import de.pschuberth.mdgen.MdList.MdListElement.Companion.u
 
 class MdList(
     private val md: Md,
-    override val level: Int = 0
+    override val level: Int = 0,
 ) : MdElement(md) {
 
     private var initialValue: Int = 1
@@ -73,7 +73,7 @@ class MdList(
         md: Md,
         private val content: String,
         private val position: Int,
-        level: Int = 0
+        level: Int = 0,
     ) :
         MdListElement(md, level) {
         override fun toString(): String {
@@ -84,7 +84,7 @@ class MdList(
     class MdUnorderedListElement(
         md: Md,
         private val content: String,
-        level: Int = 0
+        level: Int = 0,
     ) : MdListElement(md, level) {
         override fun toString(): String {
             return "- $content"
