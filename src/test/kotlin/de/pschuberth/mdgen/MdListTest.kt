@@ -20,7 +20,7 @@ class MdListTest : MdTestCase() {
             - First
             - Second
             - Third
-            """.trimIndent()
+            """.trimIndent(),
         )
     }
 
@@ -40,7 +40,7 @@ class MdListTest : MdTestCase() {
             1. First
             2. Second
             3. Third
-            """.trimIndent()
+            """.trimIndent(),
         )
     }
 
@@ -61,7 +61,7 @@ class MdListTest : MdTestCase() {
             23. First
             24. Second
             25. Third
-            """.trimIndent()
+            """.trimIndent(),
         )
     }
 
@@ -87,7 +87,7 @@ class MdListTest : MdTestCase() {
                 1. First nested
                 2. Second nested
             - Third
-            """.trimIndent()
+            """.trimIndent(),
         )
     }
 
@@ -113,7 +113,7 @@ class MdListTest : MdTestCase() {
                 - First nested
                 - Second nested
             3. Third
-            """.trimIndent()
+            """.trimIndent(),
         )
     }
 
@@ -139,7 +139,7 @@ class MdListTest : MdTestCase() {
                 - First nested
                 - Second nested
             - Third
-            """.trimIndent()
+            """.trimIndent(),
         )
     }
 
@@ -165,7 +165,7 @@ class MdListTest : MdTestCase() {
                 1. First nested
                 2. Second nested
             3. Third
-            """.trimIndent()
+            """.trimIndent(),
         )
     }
 }
