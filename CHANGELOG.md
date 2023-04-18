@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.10](https://github.com/paulschuberth/mdgen/compare/v0.2.9...v0.2.10) (2023-04-18)
+
+
+### Bug Fixes
+
+* use simple release strategy ([1f37d73](https://github.com/paulschuberth/mdgen/commit/1f37d73b48618916140beb1a6bff7ab26be88f26))
+
 ## [0.2.9](https://github.com/paulschuberth/mdgen/compare/v0.2.8...v0.2.9) (2023-02-04)
 
 
