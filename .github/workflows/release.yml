@@ -15,7 +15,7 @@ jobs:
         with:
           token: ${{ secrets.PAT }}
           config-file: release-please-config.json
-          release-type: java
+          release-type: simple
     outputs:
       releases_created: ${{ steps.release-please.outputs.releases_created }}
 

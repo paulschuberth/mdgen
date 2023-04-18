@@ -2,7 +2,7 @@
   "packages": {
     ".": {
       "changelog-path": "CHANGELOG.md",
-      "release-type": "java",
+      "release-type": "simple",
       "skip-snapshot": true,
       "bump-minor-pre-major": true,
       "bump-patch-for-minor-pre-major": true,
