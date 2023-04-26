@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.12](https://github.com/paulschuberth/mdgen/compare/v0.2.11...v0.2.12) (2023-04-26)
+
+
+### Bug Fixes
+
+* **workflows:** add extra-files option in release-please-action ([c826c4d](https://github.com/paulschuberth/mdgen/commit/c826c4db2cfc8d512ec415eb38eee33946ac61fa))
+
 ## [0.2.11](https://github.com/paulschuberth/mdgen/compare/v0.2.10...v0.2.11) (2023-04-26)
 
 
