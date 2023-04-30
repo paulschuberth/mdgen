@@ -44,14 +44,11 @@ jobs:
           name: test-results
           path: build/test-results/test
 
-      - name: Generate kover coverage report
-        run: ./gradlew koverXmlReport
-
       - name: Add coverage report to PR
         id: kover
         uses: mi-kas/kover-report@v1
         with:
-          path: ${{ github.workspace }}/build/reports/kover/xml/report.xml
+          path: ${{ github.workspace }}/build/reports/kover/report.xml
           token: ${{ secrets.GITHUB_TOKEN }}
           title: Code Coverage
           update-comment: true
