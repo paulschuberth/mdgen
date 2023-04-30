@@ -36,7 +36,7 @@ jobs:
       - name: Build Library
         uses: gradle/gradle-build-action@v2
         with:
-          arguments: build
+          arguments: check
 
       - uses: actions/upload-artifact@v3
         if: success() || failure()
