@@ -6,6 +6,7 @@ plugins {
     `maven-publish`
     id("org.jetbrains.kotlinx.kover") version "0.6.1"
     id("org.jetbrains.dokka") version "1.8.10"
+    id("ca.cutterslade.analyze") version "1.9.1"
 }
 
 group = "de.pschuberth"
@@ -25,6 +26,9 @@ repositories {
 }
 
 dependencies {
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.8.20")
+    implementation("org.jetbrains:annotations:13.0")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.3")
     testImplementation(kotlin("test"))
 }
 
