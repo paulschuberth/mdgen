@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.14](https://github.com/paulschuberth/mdgen/compare/v0.2.13...v0.2.14) (2023-05-01)
+
+
+### Miscellaneous
+
+* **ci:** Remove dependabot config ([996240b](https://github.com/paulschuberth/mdgen/commit/996240b09d10d9b867815706b51fc4d81bda7d29))
+* **ci:** Use adjusted action for customized commit messages ([bcf5ae3](https://github.com/paulschuberth/mdgen/commit/bcf5ae341a03a0d061c5e37bda5210a699f115b7))
+
 ## [0.2.13](https://github.com/paulschuberth/mdgen/compare/v0.2.12...v0.2.13) (2023-05-01)
 
 
