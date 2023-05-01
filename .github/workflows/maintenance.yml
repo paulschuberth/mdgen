@@ -13,6 +13,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Update Gradle Wrapper
-        uses: gradle-update/update-gradle-wrapper-action@v1
+        uses: paulschuberth/update-gradle-wrapper-action@main
         with:
           repo-token: ${{ secrets.PAT }}
+          commit-message-template: 'chore(deps): Bump Gradle Wrapper to %targetVersion%'
