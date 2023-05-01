@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.2.13](https://github.com/paulschuberth/mdgen/compare/v0.2.12...v0.2.13) (2023-05-01)
+
+
+### Miscellaneous
+
+* add gradle-dependency-check plugin ([4703660](https://github.com/paulschuberth/mdgen/commit/4703660a09123ec1cff9648295b131ff81e529b7))
+* add workflow for repo maintenance ([add85bc](https://github.com/paulschuberth/mdgen/commit/add85bc43183408871769888d441ec703b9c6761))
+* create xml kover report in `gradle check` ([b61e272](https://github.com/paulschuberth/mdgen/commit/b61e27221829a493b7958cc3c325cbc1cca2e5d7))
+* **deps:** bump actions/checkout from 2 to 3 ([dd6bf61](https://github.com/paulschuberth/mdgen/commit/dd6bf61c815fa99db733be930249c190b4a5e283))
+* **deps:** bump org.jetbrains:annotations from 13.0 to 24.0.1 ([bd49e2a](https://github.com/paulschuberth/mdgen/commit/bd49e2a1ae6167cd7cf90ee19bb9c41b8a3653ef))
+* **deps:** bump org.jetbrains.kotlin:kotlin-stdlib ([5054376](https://github.com/paulschuberth/mdgen/commit/5054376c71bbb4c632143eda5d1dbcd8aec079f0))
+* **deps:** bump org.junit.jupiter:junit-jupiter-api ([599c0ed](https://github.com/paulschuberth/mdgen/commit/599c0ed40a3642bdac70ebceb6d3d0b64a3cfe8f))
+* run all `gradle check` in ci ([00a5b21](https://github.com/paulschuberth/mdgen/commit/00a5b215159dda6cfa10f363661981b1c2f07036))
+
 ## [0.2.12](https://github.com/paulschuberth/mdgen/compare/v0.2.11...v0.2.12) (2023-04-26)
 
 
