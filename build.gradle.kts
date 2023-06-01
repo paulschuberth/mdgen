@@ -4,7 +4,7 @@ plugins {
     kotlin("jvm") version "1.8.21"
     `java-library`
     `maven-publish`
-    id("org.jetbrains.kotlinx.kover") version "0.7.0"
+    id("org.jetbrains.kotlinx.kover") version "0.7.1"
     id("org.jetbrains.dokka") version "1.8.10"
     id("ca.cutterslade.analyze") version "1.9.1"
 }
