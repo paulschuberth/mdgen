@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.2.16](https://github.com/paulschuberth/mdgen/compare/v0.2.15...v0.2.16) (2023-06-08)
+
+
+### Bug Fixes
+
+* **deps:** update dependency org.jetbrains.kotlin:kotlin-stdlib to v1.8.22 ([6262ded](https://github.com/paulschuberth/mdgen/commit/6262ded12a08eb3f0c48844faf56a776bcd09b21))
+
+
+### Miscellaneous
+
+* **deps:** update plugin org.jetbrains.dokka to v1.8.20 ([dc4ed62](https://github.com/paulschuberth/mdgen/commit/dc4ed62d063444e09d6176e562479a679abaf2b4))
+* **deps:** update plugin org.jetbrains.kotlin.jvm to v1.8.22 ([a0898ca](https://github.com/paulschuberth/mdgen/commit/a0898caf440007a78f119e27541b46cc3e8d48c3))
+* **deps:** update plugin org.jetbrains.kotlinx.kover to v0.7.1 ([7a2d8c8](https://github.com/paulschuberth/mdgen/commit/7a2d8c8edb52d7b697b6ce53c196bc87663a4a02))
+
 ## [0.2.15](https://github.com/paulschuberth/mdgen/compare/v0.2.14...v0.2.15) (2023-05-17)
 
 
