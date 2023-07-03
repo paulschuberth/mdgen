@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.17](https://github.com/paulschuberth/mdgen/compare/v0.2.16...v0.2.17) (2023-07-03)
+
+
+### Miscellaneous
+
+* **deps:** update plugin org.jetbrains.kotlinx.kover to v0.7.2 ([c9d1b3e](https://github.com/paulschuberth/mdgen/commit/c9d1b3e700553f778171006b948cc4abf06e4008))
+
 ## [0.2.16](https://github.com/paulschuberth/mdgen/compare/v0.2.15...v0.2.16) (2023-06-08)
 
 
