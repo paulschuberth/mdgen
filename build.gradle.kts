@@ -11,7 +11,7 @@ plugins {
 
 group = "de.pschuberth"
 // x-release-please-start-version
-version = "0.2.17"
+version = "0.2.18"
 // x-release-please-end
 
 java {

@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.18](https://github.com/paulschuberth/mdgen/compare/v0.2.17...v0.2.18) (2023-07-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency org.jetbrains.kotlin:kotlin-stdlib to v1.9.0 ([477be02](https://github.com/paulschuberth/mdgen/commit/477be0296b17c7475fb3cae681a5f976ff4aab66))
+
+
+### Miscellaneous
+
+* **deps:** update plugin org.jetbrains.kotlin.jvm to v1.9.0 ([9d5940e](https://github.com/paulschuberth/mdgen/commit/9d5940e33d0344fcb3d08e7506fb3f85f5d926a3))
+
 ## [0.2.17](https://github.com/paulschuberth/mdgen/compare/v0.2.16...v0.2.17) (2023-07-03)
 
 
