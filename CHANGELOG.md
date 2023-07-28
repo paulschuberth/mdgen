@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.19](https://github.com/paulschuberth/mdgen/compare/v0.2.18...v0.2.19) (2023-07-28)
+
+
+### Bug Fixes
+
+* **deps:** update dependency org.junit.jupiter:junit-jupiter-api to v5.10.0 ([760e1e8](https://github.com/paulschuberth/mdgen/commit/760e1e8d770418c0ef13853e9978021efc66210e))
+
+
+### Miscellaneous
+
+* **deps:** update plugin org.jetbrains.kotlinx.kover to v0.7.3 ([d979ad3](https://github.com/paulschuberth/mdgen/commit/d979ad335ffe4bc0be6ee7b4ebf59d57c74d0d13))
+
 ## [0.2.18](https://github.com/paulschuberth/mdgen/compare/v0.2.17...v0.2.18) (2023-07-06)
 
 
