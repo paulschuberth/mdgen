@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.2.20](https://github.com/paulschuberth/mdgen/compare/v0.2.19...v0.2.20) (2023-09-01)
+
+
+### Bug Fixes
+
+* **deps:** update dependency org.jetbrains.kotlin:kotlin-stdlib to v1.9.10 ([0cc390f](https://github.com/paulschuberth/mdgen/commit/0cc390f8740ddd9f4f2e1ca8fd8410fcddcaec49))
+
+
+### Miscellaneous
+
+* **deps:** Bump Gradle Wrapper to 8.3 ([dad2128](https://github.com/paulschuberth/mdgen/commit/dad2128caa26a088d98120a59f7702b6ca19a3a2))
+* **deps:** update actions/upload-pages-artifact action to v2 ([4420040](https://github.com/paulschuberth/mdgen/commit/44200407fda8e7e91cccef6d98a3f44d9214be1f))
+* **deps:** update plugin org.jetbrains.dokka to v1.9.0 ([ffc01cb](https://github.com/paulschuberth/mdgen/commit/ffc01cb50e2330d3b598ec4bbe8a7bb7062c84d1))
+* **deps:** update plugin org.jetbrains.kotlin.jvm to v1.9.10 ([e3a18d6](https://github.com/paulschuberth/mdgen/commit/e3a18d6e3f2a120751f7b5df1c101378dc5830f4))
+
 ## [0.2.19](https://github.com/paulschuberth/mdgen/compare/v0.2.18...v0.2.19) (2023-07-28)
 
 
