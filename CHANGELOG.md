@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.21](https://github.com/paulschuberth/mdgen/compare/v0.2.20...v0.2.21) (2023-09-05)
+
+
+### Miscellaneous
+
+* **deps:** update actions/checkout action to v4 ([c75490f](https://github.com/paulschuberth/mdgen/commit/c75490fe600f78098daa33b0a5027c95810584ac))
+
 ## [0.2.20](https://github.com/paulschuberth/mdgen/compare/v0.2.19...v0.2.20) (2023-09-01)
 
 
