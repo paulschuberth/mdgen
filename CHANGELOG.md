@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.22](https://github.com/paulschuberth/mdgen/compare/v0.2.21...v0.2.22) (2023-10-05)
+
+
+### Miscellaneous
+
+* **deps:** Bump Gradle Wrapper to 8.4 ([c7e7fe4](https://github.com/paulschuberth/mdgen/commit/c7e7fe4a5a1515cce63000e3fe0f835543749663))
+
 ## [0.2.21](https://github.com/paulschuberth/mdgen/compare/v0.2.20...v0.2.21) (2023-09-05)
 
 
