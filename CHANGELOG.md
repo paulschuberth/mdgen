@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.23](https://github.com/paulschuberth/mdgen/compare/v0.2.22...v0.2.23) (2023-10-16)
+
+
+### Miscellaneous
+
+* **deps:** update plugin org.jetbrains.dokka to v1.9.10 ([f28bb4f](https://github.com/paulschuberth/mdgen/commit/f28bb4f52e65c49816e6d2bdc122bd9c1d87b213))
+* **deps:** update plugin org.jetbrains.kotlinx.kover to v0.7.4 ([00ad6b7](https://github.com/paulschuberth/mdgen/commit/00ad6b7278649d91fcfbcce9aa4ff9a3afaed903))
+
 ## [0.2.22](https://github.com/paulschuberth/mdgen/compare/v0.2.21...v0.2.22) (2023-10-05)
 
 
