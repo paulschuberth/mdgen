@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.2.24](https://github.com/paulschuberth/mdgen/compare/v0.2.23...v0.2.24) (2023-12-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency org.jetbrains:annotations to v24.1.0 ([00b4160](https://github.com/paulschuberth/mdgen/commit/00b41601809fc0607fb899db68d173ca7d9b98b6))
+* **deps:** update dependency org.jetbrains.kotlin:kotlin-stdlib to v1.9.20 ([1cc82b5](https://github.com/paulschuberth/mdgen/commit/1cc82b57995b60a74c7416bd3351f14f1243810d))
+* **deps:** update dependency org.jetbrains.kotlin:kotlin-stdlib to v1.9.21 ([33758a5](https://github.com/paulschuberth/mdgen/commit/33758a50ca00245cba412b21c6c5a7ddb3fd4006))
+* **deps:** update dependency org.junit.jupiter:junit-jupiter-api to v5.10.1 ([054ed6b](https://github.com/paulschuberth/mdgen/commit/054ed6b9c8e81c3a883d5e9080f326c2a680ec53))
+
 ## [0.2.23](https://github.com/paulschuberth/mdgen/compare/v0.2.22...v0.2.23) (2023-10-16)
 
 
