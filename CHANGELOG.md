@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.2.26](https://github.com/paulschuberth/mdgen/compare/v0.2.25...v0.2.26) (2024-06-29)
+
+
+### Bug Fixes
+
+* Adjust Kover config ([e133d14](https://github.com/paulschuberth/mdgen/commit/e133d14d59a56c722c42aa25ee6fb6df3bb5c544))
+* **deps:** update dependency org.jetbrains.kotlin:kotlin-stdlib to v1.9.23 ([660cb06](https://github.com/paulschuberth/mdgen/commit/660cb064070032f53f6b28c11734219f1f275e1d))
+* **deps:** update dependency org.jetbrains.kotlin:kotlin-stdlib to v2 ([bafabe8](https://github.com/paulschuberth/mdgen/commit/bafabe830b3b837600c1721e60bb2c6ed836fc70))
+* **deps:** update dependency org.junit.jupiter:junit-jupiter-api to v5.10.3 ([a690675](https://github.com/paulschuberth/mdgen/commit/a69067587dbaff6800a1a475b46b2660d9df5e58))
+
 ## [0.2.25](https://github.com/paulschuberth/mdgen/compare/v0.2.24...v0.2.25) (2024-02-04)
 
 
