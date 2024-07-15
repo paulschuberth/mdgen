@@ -6,7 +6,7 @@ plugins {
     `maven-publish`
     id("org.jetbrains.kotlinx.kover") version "0.8.2"
     id("org.jetbrains.dokka") version "1.9.20"
-    id("ca.cutterslade.analyze") version "1.9.2"
+    id("ca.cutterslade.analyze") version "1.10.0"
 }
 
 group = "de.pschuberth"
