@@ -38,7 +38,7 @@ repositories {
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib:2.0.10")
     implementation("org.jetbrains:annotations:24.1.0")
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.3")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.11.0")
     testImplementation(kotlin("test"))
 }
 
