@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.2.27](https://github.com/paulschuberth/mdgen/compare/v0.2.26...v0.2.27) (2024-08-31)
+
+
+### Bug Fixes
+
+* **deps:** update dependency org.jetbrains.kotlin:kotlin-stdlib to v2.0.10 ([96abd81](https://github.com/paulschuberth/mdgen/commit/96abd81f5913d6661f0b527db14502eb47802f29))
+* **deps:** update dependency org.jetbrains.kotlin:kotlin-stdlib to v2.0.20 ([70f4b1c](https://github.com/paulschuberth/mdgen/commit/70f4b1c2c767c80316e181fe0c49c4b57685ef54))
+* **deps:** update dependency org.junit.jupiter:junit-jupiter-api to v5.11.0 ([aa11aa4](https://github.com/paulschuberth/mdgen/commit/aa11aa4ac76496ea8b0dae023de81c4a80829330))
+
 ## [0.2.26](https://github.com/paulschuberth/mdgen/compare/v0.2.25...v0.2.26) (2024-06-29)
 
 
